@@ -1,0 +1,63 @@
+{
+  "timestamp": "2026-05-02T00:40:35+08:00",
+  "project": "Embedded-Linux-Dev-Notes",
+  "description": "嵌入式Linux应用开发学习笔记仓库",
+  "root_claude_md": "CLAUDE.md",
+  "modules": [
+    {
+      "path": "文件IO",
+      "language": "C",
+      "claude_md": "文件IO/CLAUDE.md",
+      "entry_files": [
+        "文件IO/fopen_test.c",
+        "文件IO/fclose_test.c",
+        "文件IO/fputc_test.c",
+        "文件IO/fputs_test.c",
+        "文件IO/fprintf_test.c",
+        "文件IO/fgetc_test.c"
+      ],
+      "build_file": "文件IO/Makefile",
+      "apis_practiced": ["fopen", "fclose", "fputc", "fputs", "fprintf", "fgetc"],
+      "coverage": "100%"
+    },
+    {
+      "path": "makefile",
+      "language": "C",
+      "claude_md": "makefile/CLAUDE.md",
+      "entry_files": ["makefile/main.c"],
+      "build_file": "makefile/Makefile",
+      "apis_practiced": ["Makefile变量", "模式规则", "clean目标"],
+      "coverage": "100%"
+    },
+    {
+      "path": "process_test",
+      "language": "C",
+      "claude_md": "process_test/CLAUDE.md",
+      "entry_files": [
+        "process_test/fork_test.c",
+        "process_test/fork_fd_test.c",
+        "process_test/system_test.c"
+      ],
+      "build_file": "process_test/Makefile",
+      "apis_practiced": ["fork", "execve", "system", "getpid", "getppid", "open", "write"],
+      "gaps": [
+        "execve_test.c 内容为空，尚未完成实践编写",
+        "execve_test.c 未纳入 Makefile 目标"
+      ],
+      "coverage": "100%"
+    }
+  ],
+  "scan_summary": {
+    "total_files_estimated": 18,
+    "files_scanned": 18,
+    "coverage_percent": 100,
+    "total_modules": 3,
+    "modules_covered": 3,
+    "truncated": false
+  },
+  "next_steps": [
+    "当仓库新增学习模块(如进程间通信、网络编程等)时，重新运行 init-architect",
+    "当 execve_test.c 完成编写后，更新 process_test/CLAUDE.md 和 index.json",
+    "当 README.md 的学习进度更新时，同步更新根级 CLAUDE.md 的模块索引"
+  ]
+}
