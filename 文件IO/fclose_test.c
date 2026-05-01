@@ -27,6 +27,27 @@ int main()
     {
         printf("File opened successfully.\n");
     }
-    fclose(file);
+
+    /**
+     * @brief 简述：关闭文件
+     *
+     * @def 函数原型：
+     *      int fclose (FILE *__stream)
+     *
+     * @param FILE *__stream：
+     *      含义：要关闭的文件结构体指针
+     *
+     * @return int：
+     *      成功：0
+     *      失败：EOF
+     *
+     * @note 注意事项/易错点：
+     */
+    int result = fclose(file);
+    if (result == EOF)
+    {
+        perror("fclose");
+        return 1;
+    }
     return 0;
 }

@@ -18,3 +18,8 @@
 # 调试文件
 *.dSYM/
 *.su
+
+# 程序运行时生成的数据文件
+io.txt
+user.txt
+example.txt
