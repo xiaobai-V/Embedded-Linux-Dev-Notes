@@ -33,4 +33,14 @@ fgetc_test: fgetc_test.c
 fgets_test: fgets_test.c
 	-$(CC) -o $@ $^
 	-./$@
+	-rm ./$@
+
+stdin_out_err_test: stdin_out_err_test.c
+	-$(CC) -o $@ $^
+	-./$@
+	-rm ./$@
+
+system_call_test: system_call_test.c
+	-$(CC) -o $@ $^
+	-./$@
 	-rm ./$@	
