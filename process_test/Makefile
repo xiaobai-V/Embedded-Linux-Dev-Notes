@@ -112,6 +112,11 @@ producer: producer.c
 consumer: consumer.c
 	-$(CC) -o $@ $^
 
+p_c_mq: producer consumer
+
+pc_mq_clean:
+	-rm ./producer ./consumer
+
 signal_test: signal_test.c
 	-$(CC) -o $@ $^
 	-./$@

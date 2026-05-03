@@ -8,6 +8,10 @@
 *.a
 *.so
 
+# 消息队列示例编译产物（需两个终端分别运行，Makefile 不自动清理）
+process_test/producer
+process_test/consumer
+
 # 临时文件
 *~
 *.swp
