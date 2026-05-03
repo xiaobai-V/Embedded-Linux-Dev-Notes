@@ -100,3 +100,19 @@ my_shared_memory2: my_shared_memory2.c
 	-$(CC) -o $@ $^
 	-./$@
 	-rm ./$@
+
+father_son_mq_test: father_son_mq_test.c
+	-$(CC) -o $@ $^
+	-./$@
+	-rm ./$@
+
+producer: producer.c
+	-$(CC) -o $@ $^
+
+consumer: consumer.c
+	-$(CC) -o $@ $^
+
+signal_test: signal_test.c
+	-$(CC) -o $@ $^
+	-./$@
+	-rm ./$@
