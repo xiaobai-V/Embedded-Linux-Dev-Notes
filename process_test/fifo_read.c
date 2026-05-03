@@ -38,7 +38,7 @@ int main(int argc, char const *argv[])
     // 从有名管道中读取数据，打印到控制台
     ssize_t readNum;
     char buf[100];
-    // read 返回 0 表示写端全部关闭（EOF），此时退出循环
+    // read 返回 0 表示写端全部关闭（EOF）aa，此时退出循环
     // 这与匿名管道的行为一致：所有写端 fd 关闭后，read 不再阻塞
     while ((readNum = read(fd, buf, sizeof(buf))) > 0)
     {

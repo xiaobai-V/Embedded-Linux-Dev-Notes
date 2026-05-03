@@ -85,3 +85,18 @@ named_fifo: fifo_write fifo_read
 named_fifo_clean:
 	-rm ./fifo_write ./fifo_read
 	-rm -f /tmp/myfifo
+
+shared_memory: shared_memory.c
+	-$(CC) -o $@ $^
+	-./$@
+	-rm ./$@
+
+shared_memory2: shared_memory2.c
+	-$(CC) -o $@ $^
+	-./$@
+	-rm ./$@
+
+my_shared_memory2: my_shared_memory2.c
+	-$(CC) -o $@ $^
+	-./$@
+	-rm ./$@
