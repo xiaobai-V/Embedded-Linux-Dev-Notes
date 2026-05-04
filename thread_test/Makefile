@@ -115,12 +115,54 @@ unnamed_sem_bin_process_condition: unnamed_sem_bin_process_condition.c
 	-./$@
 	-rm -f ./$@
 
+unnamed_sem_bin_process: unnamed_sem_bin_process.c
+	$(CC) $(CFLAGS) -o $@ $^ $(LDFLAGS)
+	@echo "===== 运行 $@ ====="
+	-./$@
+	-rm -f ./$@
+
+unnamed_sem_bin_process_illegal: unnamed_sem_bin_process_illegal.c
+	$(CC) $(CFLAGS) -o $@ $^ $(LDFLAGS)
+	@echo "===== 运行 $@ ====="
+	-./$@
+	-rm -f ./$@
+
+
+unnamed_sem_bin_process_isolate: unnamed_sem_bin_process_isolate.c
+	$(CC) $(CFLAGS) -o $@ $^ $(LDFLAGS)
+	@echo "===== 运行 $@ ====="
+	-./$@
+	-rm -f ./$@
+
+unnamed_sem_count_thread: unnamed_sem_count_thread.c
+	$(CC) $(CFLAGS) -o $@ $^ $(LDFLAGS)
+	@echo "===== 运行 $@ ====="
+	-./$@
+	-rm -f ./$@
+
+unnamed_sem_count_process: unnamed_sem_count_process.c
+	$(CC) $(CFLAGS) -o $@ $^ $(LDFLAGS)
+	@echo "===== 运行 $@ ====="
+	-./$@
+	-rm -f ./$@
+
+named_sem_bin: named_sem_bin.c
+	$(CC) $(CFLAGS) -o $@ $^ $(LDFLAGS)
+	@echo "===== 运行 $@ ====="
+	-./$@
+	-rm -f ./$@
+
+named_sem_count: named_sem_count.c
+	$(CC) $(CFLAGS) -o $@ $^ $(LDFLAGS)
+	@echo "===== 运行 $@ ====="
+	-./$@
+	-rm -f ./$@
+
 thread_pool_test: thread_pool_test.c
 	$(CC) $(CFLAGS) -o $@ $^ `pkg-config --cflags --libs glib-2.0`
 	@echo "===== 运行 $@ ====="
 	-./$@
 	-rm -f ./$@
-
 
 
 clean:
