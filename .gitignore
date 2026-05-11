@@ -27,3 +27,6 @@ process_test/consumer
 io.txt
 user.txt
 example.txt
+
+# KelpBar 教程练习（独立项目，不属于本仓库）
+KelpBar/
